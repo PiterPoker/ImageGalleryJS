@@ -1,0 +1,22 @@
+{
+  "name": "imagegalleryjs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.7.0",
+    "cross-env": "^7.0.3",
+    "sass": "^1.46.0",
+    "vite": "^2.8.0",
+    "vite-aliases": "^0.8.7"
+  },
+  "dependencies": {
+    "route-parser": "^0.0.5"
+  }
+}
