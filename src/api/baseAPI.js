@@ -1,4 +1,4 @@
-const apiServer = import.meta.evn.DEV ? 'http://localhost:3100' : "http://localhost:3100"
+const apiServer = 'http://188.166.203.164'
 
 const baseFetch = (url, config = {}, params) => {
     return new Promise((resolve, reject) => {
@@ -20,7 +20,17 @@ const baseFetch = (url, config = {}, params) => {
 }
 
 const fetchGet = (url, config) => {
-    return baseFetch(url, config)
+    return baseFetch(url, {
+        ...config,
+        method: 'GET'
+    })
+}
+
+const fetchOptions = (url, config) => {
+    return baseFetch(url, {
+        ...config,
+        method: 'OPTIONS'
+    })
 }
 
 const fetchPost = (url, params = {}, config = {}) => {
@@ -51,7 +61,9 @@ const fetchDelete = (url, params = {}, config = {}) => {
 }
 
 export default {
+    baseUrl: apiServer,
     get: fetchGet,
+    options: fetchOptions,
     post: fetchPost,
     put: fetchPut,
     patch: fetchPatch,
