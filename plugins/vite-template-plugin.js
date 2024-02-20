@@ -1,4 +1,5 @@
-const fileRegex = /\.(template)$/
+//const fileRegex = /\.(template)$/
+const fileRegex = /\.(html)$/
 
 export default function templatePlugin(){
     return {
