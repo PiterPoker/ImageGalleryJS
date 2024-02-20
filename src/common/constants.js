@@ -1,12 +1,9 @@
 const appConstants = {
     routes: {
         index: '/',
+        gallery: '/gallery',
+        tremsOfUse: '/tremsOfUse',
     },
-    search: {
-        types: {
-            gallery: 'gallery',
-        }
-    }
 }
 
 export default appConstants
