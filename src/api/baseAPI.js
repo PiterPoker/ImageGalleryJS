@@ -11,7 +11,7 @@ const baseFetch = (url, config = {}, params) => {
             }
             window.fetch(`${apiServer}${url}`, {
                 ..._config
-            }).then(response => response.json())
+            }).then(response => response)
                 .then(resolve, reject)
         } catch (error) {
             reject(error)
@@ -19,8 +19,8 @@ const baseFetch = (url, config = {}, params) => {
     })
 }
 
-const fetchGet = (url, config) => {
-    return baseFetch(url, {
+const fetchGet = async (url, config) => {
+    return await baseFetch(url, {
         ...config,
         method: 'GET'
     })

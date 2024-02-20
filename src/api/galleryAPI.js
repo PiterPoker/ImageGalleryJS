@@ -2,10 +2,13 @@ import baseAPI from './baseAPI'
 
 export const getGalleries = () => {
     return baseAPI.get('/static/test.json')
+        .then(response => response.json())
 }
 
-export const getImageByUrl = (urlPath) => {
-    return baseAPI.get(urlPath, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+export const getImageByUrl = async (urlPath) => {
+
+    return await baseAPI.get(urlPath)
+        .then(async (response) => await response.blob())
 }
 
 export const getHost = () => {
