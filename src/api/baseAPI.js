@@ -1,4 +1,4 @@
-const apiServer = 'http://188.166.203.164'
+const apiServer = ''
 
 const baseFetch = (url, config = {}, params) => {
     return new Promise((resolve, reject) => {
