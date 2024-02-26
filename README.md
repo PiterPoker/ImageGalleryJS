@@ -1,6 +1,6 @@
 ## Image gallery on JS Vanila
 
-An application used to viewing and downloading images, built with JavaScript, HTML and CSS.
+An application is used to viewing and downloading images, built with JavaScript, HTML and CSS.
 
 ## Installation and Setup Instructions
 
